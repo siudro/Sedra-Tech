@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sedra Tech</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="sources/media/favicons/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="sources/media/favicons/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="sources/media/favicons/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="sources/media/favicons/apple-touch-icon.png">
+  <link rel="manifest" href="sources/media/favicons/site.webmanifest">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="header-container">
+      <a class="brand" href="#" aria-label="SedraTech Home">
+        <img class="brand__logo" src="sources/media/logo_1_NoBackground.png" alt="SedraTech logo" width="68" height="63" />
+        <span class="brand__name">SedraTech</span>
+      </a>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="primary-nav" role="navigation">
+        <ul class="nav-list">
+          <li><a href="#inspire">Inspire</a></li>
+          <li><a href="#raise">RAISE</a></li>
+          <li><a href="#enterprise">Enterprise</a></li>
+          <li><a href="#thursdays">Thursdays</a></li>
+          <li><a href="#sponsors">Sponsors</a></li>
+          <li><a href="#contact">Contact us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section with Video Animation -->
+  <section class="hero">
+    <video id="bg-video" playsinline muted preload="metadata">
+      <!-- Desktop video sources -->
+      <source src="sources/media/videos/Raise1920.webm" type="video/webm" />
+      <source src="sources/media/videos/Raise1920.mp4" type="video/mp4" />
+      <!-- Mobile video sources -->
+      <source src="sources/media/videos/Raise720.webm" type="video/webm" />
+      <source src="sources/media/videos/Raise720.mp4" type="video/mp4" />
+      Your browser does not support HTML5 video.
+    </video>
+  </section>
+
+  <!-- SedraTech Vision Section -->
+  <section class="vision-section">
+    <div class="vision-container">
+      <div class="vision-header">
+        <img src="sources/media/logo_1_NoBackground.png" alt="SedraTech Logo" class="vision-logo" />
+        <h2 class="vision-title">Our Vision</h2>
+      </div>
+      
+      <h1 class="vision-main-title">RAISE MAKER EXPERIENCES FOR SAUDI ARABIA</h1>
+      
+      <p class="vision-description">
+        R.A.I.S.E. (Robotics, AI, and Space Exploration) by SedraTech, a non-profit and official MSX franchise, 
+        cultivates authentic, impactful, and scalable experiences made in Saudi Arabia shaping the future for Vision 2030.
+      </p>
+      
+      <button class="get-started-btn">Get Started</button>
+    </div>
+  </section>
+
+  <!-- Main Content Section -->
+  <main class="main-content">
+    <section class="content-section">
+      <div class="container">
+        <h2>About SedraTech</h2>
+        <p>Welcome to SedraTech - where innovation meets excellence. We inspire, raise, and build enterprise solutions that transform the future.</p>
+        
+        <div class="content-grid">
+          <div class="content-card">
+            <h3>Inspire</h3>
+            <p>We inspire through cutting-edge technology and innovative solutions that push boundaries.</p>
+          </div>
+          <div class="content-card">
+            <h3>Raise</h3>
+            <p>We raise standards in enterprise development and digital transformation.</p>
+          </div>
+          <div class="content-card">
+            <h3>Enterprise</h3>
+            <p>We build robust enterprise solutions that scale with your business needs.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="scripts.js"></script>
+  <noscript>JavaScript is required for the mobile menu.</noscript>
+</body>
+</html>
+
+
