@@ -150,7 +150,7 @@ body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, 
 .get-started-btn {
   width: 230px;
   height: 63px;
-  background: #FFBB29;
+  background: #F4437B;
   border: none;
   border-radius: 30px;
   font-family: 'Inter', sans-serif;
@@ -159,7 +159,7 @@ body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, 
   line-height: 34px;
   text-align: center;
   letter-spacing: 0.05em;
-  color: #F4437B;
+  color: #FAFAFA;
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -281,5 +281,160 @@ body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, 
     font-size: 24px;
   }
 }
+/* === We Inspire Section === */
+.we-inspire {
+  position: relative;
+  text-align: center;
+  color: #fafafa;
+  margin: 0; 
+  padding: 0; 
+  overflow: hidden;
+  
+}
+
+.we-inspire-bg {
+  position: relative;
+  width: 100vw;
+  height: 500px; /* adjust to your design */
+  overflow: hidden;
+}
+
+.we-inspire-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* fills entire box, no white edges */
+}
+@media (max-width: 768px) {
+  .we-inspire-bg {
+    position: relative;
+    overflow: hidden;
+    object-fit: contain; 
+    object-position: center;
+    z-index: 1;
+    background: transparent; 
+    border: none;
+    outline: none; 
+  }
+  
+  .we-inspire-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: contain;
+     max-width: 100%;
+     max-height: 100%;
+     width: auto;
+     height: auto;
+    object-fit: cover; /* fills entire box, no white edges */
+  }
+}
+@media (max-width: 991px) {
+  .we-inspire-bg {
+    position: relative;
+    overflow: hidden;
+ /* width: 100vw;
+    height: 500px;*/
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    object-fit: contain; /* Show full video without cropping */
+    object-position: center; /* Center the video */
+    z-index: 1;
+    background: transparent; /* Override any default video background */
+    border: none; /* Remove any default borders */
+    outline: none; /* Remove any default outlines */
+  }
+  
+  .we-inspire-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: contain;
+     max-width: 100%;
+     max-height: 100%;
+     width: auto;
+     height: auto;
+    object-fit: cover; /* fills entire box, no white edges */
+  }
+}
+
+.we-inspire-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.we-inspire-logo {
+  width: 35px;
+  height: 33px;
+  margin-bottom: 10px;
+}
+
+.we-inspire .subtitle {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 20px;
+  letter-spacing: -0.017em;
+  color: #fafafa;
+}
+
+.we-inspire .title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 999;
+  letter-spacing: 0.5em;
+  color: #fafafa;
+  margin: 0;
+  font-size: clamp(3rem, 7vw, 9rem); /* scales with screen, min 2rem max 4rem */
+  text-align: center;
+  white-space: nowrap; /* keep in one line */
+  margin-bottom: 40px;
+}
+
+.we-inspire-cards {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0;
+}
+
+.we-inspire-cards .card {
+  aspect-ratio: 1 / 0.5;
+  flex: 1 1 33.333%;
+  margin: 0; 
+  border-radius: 0; 
+  padding: 100px 20px;
+  color: #fff;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+
+}
+
+@media (max-width: 600px) {
+  .we-inspire-cards .card {
+    flex: 1 1 100%; 
+  }
+}
+.we-inspire-cards h4 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.we-inspire-cards p {
+  font-size: 20px;
+  line-height: 1.4;
+  letter-spacing: 0.05em;
+}
+
+/* Audience Colors */
+.we-inspire-cards .youth { background: #22C3A3; }
+.we-inspire-cards .startups { background: #F4437B; }
+.we-inspire-cards .sponsors { background: #4874ED; }
+
 
 
