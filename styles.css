@@ -84,38 +84,37 @@ body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, 
 
 
 
-
 .vision-section {
   background: #4874ED;
-  min-height: 764px;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 80px 20px;
+  padding: 5rem 1.25rem;
 }
 
 .vision-container {
-  max-width: 1200px;
+  max-width: 75rem;
   width: 100%;
   text-align: center;
   color: white;
 }
 
 .vision-header {
-  margin-bottom: 40px;
+  margin-bottom: 3rem;
 }
 
 .vision-logo {
-  width: 35px;
-  height: 32px;
-  margin-bottom: 20px;
+  width: 2.1875rem;
+  height: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .vision-title {
   font-family: 'Inter', sans-serif;
   font-weight: 700;
-  font-size: 16px;
-  line-height: 19px;
+  font-size: 1rem;
+  line-height: 1.1875rem;
   letter-spacing: -0.017em;
   color: #FAFAFA;
   margin: 0;
@@ -129,45 +128,126 @@ body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, 
   text-align: center;
   letter-spacing: 0.1em;
   color: #FFFFFF;
-  margin: 0 0 40px 0;
-  max-width: 1000px;
+  margin: 0 0 3rem 0;
+  max-width: 62.5rem;
   margin-left: auto;
   margin-right: auto;
+  padding: 0 1.25rem;
 }
 
 .vision-description {
   font-family: 'Inter', sans-serif;
   font-weight: 500;
-  font-size: clamp(1rem, 2vw, 1.375rem);
-  line-height: 1.5;
+  font-size: clamp(1.125rem, 2vw, 1.5rem);
+  line-height: 1.7;
   text-align: center;
   letter-spacing: 0.01em;
   color: #FFFFFF;
-  max-width: 1000px;
-  margin: 0 auto 60px auto;
+  max-width: 56.25rem;
+  margin: 0 auto 4rem auto;
+  padding: 0 1.25rem;
 }
 
 .get-started-btn {
-  width: 230px;
-  height: 63px;
+  width: min(14.375rem, 90%);
+  max-width: 14.375rem;
+  height: 3.9375rem;
+  padding: 0 1.25rem;
   background: #F4437B;
   border: none;
-  border-radius: 30px;
+  border-radius: 1.875rem;
   font-family: 'Inter', sans-serif;
   font-weight: 800;
-  font-size: 28px;
-  line-height: 34px;
+  font-size: 1.75rem;
+  line-height: 2.125rem;
   text-align: center;
   letter-spacing: 0.05em;
   color: #FAFAFA;
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 3rem;
 }
 
 .get-started-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  transform: translateY(-0.125rem);
+  box-shadow: 0 0.5rem 1.5625rem rgba(0, 0, 0, 0.2); 
 }
+
+/* Tablet styles */
+@media (max-width: 48rem) {
+  .vision-section {
+    padding: 4rem 1.5rem;
+    min-height: auto;
+  }
+  
+  .vision-header {
+    margin-bottom: 2.5rem;
+  }
+  
+  .vision-main-title {
+    margin-bottom: 2.5rem;
+    letter-spacing: 0.05em;
+  }
+  
+  .vision-description {
+    margin-bottom: 3rem;
+    line-height: 1.6;
+    max-width: 43.75rem;
+  }
+  
+  .get-started-btn {
+    width: min(12.5rem, 85%);
+    max-width: 12.5rem;
+    height: 3.5rem;
+    font-size: 1.5rem;
+    line-height: 1.875rem;
+    margin-bottom: 2.5rem;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 30rem) {
+  .vision-section {
+    padding: 3rem 1.25rem;
+  }
+  
+  .vision-header {
+    margin-bottom: 2rem;
+  }
+  
+  .vision-logo {
+    width: 1.875rem;
+    height: 1.75rem;
+    margin-bottom: 1rem;
+  }
+  
+  .vision-title {
+    font-size: 0.875rem;
+  }
+  
+  .vision-main-title {
+    margin-bottom: 2rem;
+    letter-spacing: 0.03em;
+  }
+  
+  .vision-description {
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+    font-size: 1rem;
+  }
+  
+  .get-started-btn {
+    width: min(11.25rem, 80%);
+    max-width: 11.25rem;
+    height: 3.125rem;
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+    border-radius: 1.5625rem;
+    margin-bottom: 2rem;
+  }
+}
+
+
 
 
 .main-content {
