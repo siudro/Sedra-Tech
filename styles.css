@@ -3,20 +3,20 @@
 html, body { margin: 0; padding: 0; }
 body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color: #111; }
 
-/* Header box as requested */
+/* Header box*/
 .site-header {
-  position: fixed; /* stick to top while scrolling; behaves like absolute at top */
+  position: fixed; 
   left: 0;
   top: 0;
   width: 100%;
-  background: #FAFAFA; /* header background */
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25); /* header shadow */
+  background: #FAFAFA; 
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
   z-index: 1000;
 }
 
 .header-container {
-  max-width: 1200px; /* matches the provided width on large screens */
-  height: 100px;      /* header height */
+  max-width: 1200px; 
+  height: 100px;     
   margin: 0 auto;
   padding: 0 16px;
   display: flex;
@@ -25,22 +25,22 @@ body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, 
   gap: 24px;
 }
 
-/* Brand (logo + name) */
+
 .brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; }
 .brand__logo { width: 68px; height: 63px; object-fit: contain; }
 .brand__name { font-weight: 700; font-size: 36px; line-height: 44px; letter-spacing: -0.017em; color: #F4437B; }
 
-/* Navigation */
+
 .primary-nav { display: block; }
 .nav-list { list-style: none; display: flex; gap: 24px; margin: 0; padding: 0; align-items: center; }
 .nav-list a { text-decoration: none; font-weight: 700; font-size: 16px; line-height: 19px; letter-spacing: -0.017em; color: #4874ED; }
 .nav-list a:hover { text-decoration: underline; }
 
-/* Mobile menu toggle */
+
 .nav-toggle { display: none; background: transparent; border: 0; padding: 8px; cursor: pointer; }
 .nav-toggle__bar { display: block; width: 24px; height: 2px; background: #4874ED; margin: 5px 0; transition: transform 0.2s ease; }
 
-/* Responsive behavior */
+
 @media (max-width: 991px) {
   .header-container { height: 80px; }
   .brand__name { font-size: 28px; line-height: 34px; }
@@ -55,36 +55,36 @@ body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, 
   .nav-list a { display: block; padding: 14px 16px; }
 }
 
-/* Large screen exact alignment helpers (optional) */
+
 @media (min-width: 1200px) {
   .header-container { padding-left: 0; padding-right: 0; }
 }
 
-/* Hero Section */
+
 .hero {
   position: relative;
-  height: 200vh; /* Make section longer for full video scroll */
-  margin-top: 100px; /* Add space for fixed header */
-  background: linear-gradient(to bottom, #FAFAFA 0%, #FAFAFA 33%, #F4437B 33%, #F4437B 66%, #4874ED 66%, #4874ED 100%); /* Top: #FAFAFA, Middle: #F4437B, Bottom: #4874ED */
+  height: 200vh; 
+  margin-top: 100px;
+  background: linear-gradient(to bottom, #FAFAFA 0%, #FAFAFA 33%, #F4437B 33%, #F4437B 66%, #4874ED 66%, #4874ED 100%); 
 }
 
-/* Video as inline content */
+
 #bg-video {
   position: sticky;
   top: 0;
   width: 100%;
-  height: 100vh; /* Full viewport height */
-  object-fit: contain; /* Show full video without cropping */
-  object-position: center; /* Center the video */
+  height: 100vh;
+  object-fit: contain; 
+  object-position: center; 
   z-index: 1;
-  background: transparent; /* Override any default video background */
-  border: none; /* Remove any default borders */
-  outline: none; /* Remove any default outlines */
+  background: transparent;
+  border: none;
+  outline: none;
 }
 
 
 
-/* Vision Section */
+
 .vision-section {
   background: #4874ED;
   min-height: 764px;
@@ -169,7 +169,7 @@ body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, 
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
 
-/* Main Content */
+
 .main-content {
   background: white;
   min-height: 100vh;
@@ -236,12 +236,12 @@ body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, 
   line-height: 1.6;
 }
 
-/* Mobile Optimizations */
+
 @media (max-width: 768px) {
   .hero {
-    margin-top: 80px; /* Mobile header height */
-    height: 150vh; /* Reduce height for mobile */
-    background: linear-gradient(to bottom, #FAFAFA 0%, #FAFAFA 40%, #F4437B 40%, #F4437B 62%, #4874ED 30%, #4874ED 100%); /* Shorter pink and blue edges for mobile */
+    margin-top: 80px; 
+    height: 150vh; 
+    background: linear-gradient(to bottom, #FAFAFA 0%, #FAFAFA 40%, #F4437B 40%, #F4437B 62%, #4874ED 30%, #4874ED 100%);
   }
   
   
@@ -262,7 +262,7 @@ body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, 
   .vision-section {
     padding: 20px 20px;
     min-height: auto;
-    margin-top: -20px; /* Reduce gap between blue edge and vision section */
+    margin-top: -20px; 
   }
   
   .vision-main-title {
@@ -294,9 +294,11 @@ body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, 
 
 .we-inspire-bg {
   position: relative;
-  width: 100vw;
-  height: 500px; /* adjust to your design */
+  aspect-ratio: 1600 / 533;
+  width: 100%;
+  height: auto; 
   overflow: hidden;
+
 }
 
 .we-inspire-image {
@@ -305,60 +307,11 @@ body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, 
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* fills entire box, no white edges */
+  object-fit: cover; 
+  display: block;
 }
-@media (max-width: 768px) {
-  .we-inspire-bg {
-    position: relative;
-    overflow: hidden;
-    object-fit: contain; 
-    object-position: center;
-    z-index: 1;
-    background: transparent; 
-    border: none;
-    outline: none; 
-  }
-  
-  .we-inspire-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    object-fit: contain;
-     max-width: 100%;
-     max-height: 100%;
-     width: auto;
-     height: auto;
-    object-fit: cover; /* fills entire box, no white edges */
-  }
-}
-@media (max-width: 991px) {
-  .we-inspire-bg {
-    position: relative;
-    overflow: hidden;
- /* width: 100vw;
-    height: 500px;*/
-    width: 100%;
-    height: 100vh; /* Full viewport height */
-    object-fit: contain; /* Show full video without cropping */
-    object-position: center; /* Center the video */
-    z-index: 1;
-    background: transparent; /* Override any default video background */
-    border: none; /* Remove any default borders */
-    outline: none; /* Remove any default outlines */
-  }
-  
-  .we-inspire-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    object-fit: contain;
-     max-width: 100%;
-     max-height: 100%;
-     width: auto;
-     height: auto;
-    object-fit: cover; /* fills entire box, no white edges */
-  }
-}
+
+
 
 .we-inspire-overlay {
   position: absolute;
@@ -368,16 +321,16 @@ body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, 
 }
 
 .we-inspire-logo {
-  width: 35px;
-  height: 33px;
+  width: clamp(25px, 5vw, 35px);  /* scales with viewport */
+  height: auto;                   /* keeps aspect ratio */
   margin-bottom: 10px;
 }
 
 .we-inspire .subtitle {
   font-family: 'Inter', sans-serif;
   font-weight: 700;
-  font-size: 16px;
-  margin-bottom: 20px;
+  font-size: clamp(0.9rem, 2.5vw, 1rem); /* responsive size */
+  margin-bottom: 15px;
   letter-spacing: -0.017em;
   color: #fafafa;
 }
@@ -385,15 +338,27 @@ body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, 
 .we-inspire .title {
   font-family: 'Inter', sans-serif;
   font-weight: 999;
-  letter-spacing: 0.5em;
+  letter-spacing: clamp(0.2em, 1vw, 0.5em); /* less extreme on small screens */
   color: #fafafa;
   margin: 0;
-  font-size: clamp(3rem, 7vw, 9rem); /* scales with screen, min 2rem max 4rem */
+  font-size: clamp(2rem, 6vw, 9rem);  /* responsive headline */
   text-align: center;
-  white-space: nowrap; /* keep in one line */
-  margin-bottom: 40px;
+  white-space: normal;                /* allow wrapping on mobile */
+  line-height: 1.1;                   /* tighter spacing */
+  margin-bottom: 30px;
 }
-
+@media (max-width: 480px) {
+  .we-inspire .title {
+    font-size: clamp(0.2rem, 6vw, 3rem);
+    letter-spacing: 0.2em;
+  }
+  .we-inspire .subtitle {
+    font-size: 0.9rem;
+  }
+  .we-inspire-logo {
+    width: 15px;
+  }
+}
 .we-inspire-cards {
   display: flex;
   flex-wrap: wrap;
@@ -402,36 +367,51 @@ body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, 
 }
 
 .we-inspire-cards .card {
-  aspect-ratio: 1 / 0.5;
-  flex: 1 1 33.333%;
+  flex: 1 1 33.3333%;
+  aspect-ratio: 533 / 533;
+  padding: 3vw;
   margin: 0; 
   border-radius: 0; 
   padding: 100px 20px;
   color: #fff;
   text-align: center;
-  justify-content: center;
-  align-items: center;
+  display: flex;               /* NEW */
+  flex-direction: column;      /* stack heading + text */
+  justify-content: center;     /* center vertically */
+  align-items: center; 
 
-}
-
-@media (max-width: 600px) {
-  .we-inspire-cards .card {
-    flex: 1 1 100%; 
-  }
 }
 .we-inspire-cards h4 {
-  font-size: 2.5rem;
+  font-size: 2.5rem; /* desktop */
   margin-bottom: 15px;
   font-weight: 700;
 }
 
 .we-inspire-cards p {
-  font-size: 20px;
+  font-size: 20px; /* desktop */
   line-height: 1.4;
   letter-spacing: 0.05em;
 }
+@media (max-width: 747px) {
+  .we-inspire-cards .card {
+    flex: 1 1 100%; 
+    aspect-ratio: 4 / 1;
+    padding: 40px 20px;   
+  }
 
-/* Audience Colors */
+.we-inspire-cards h4 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.we-inspire-cards p {
+  font-size: 1rem;
+  line-height: 1.3;
+  letter-spacing: 0.02em;
+}}
+
+
 .we-inspire-cards .youth { background: #22C3A3; }
 .we-inspire-cards .startups { background: #F4437B; }
 .we-inspire-cards .sponsors { background: #4874ED; }
