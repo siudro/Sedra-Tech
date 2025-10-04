@@ -640,14 +640,51 @@ body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, 
     border-radius: 15px;
   }}
   .enterprise-zone {
-    background-color: #22C3A3;
-    color: #FAFAFA;
+    position: relative;
     text-align: center;
-    padding: 80px 20px;
+    color: #fafafa;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
   }
   
+  /* Responsive background container */
+  .enterprise-bg {
+    position: relative;
+    aspect-ratio: 2402 / 3230; /* matches image’s dimensions */
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+  
+  /* Background image */
+  .enterprise-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top; /* slightly focuses on upper part */
+    display: block;
+  }
+  
+  /* Overlay content */
+  .enterprise-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  
+  /* Headings and main text */
   .enterprise-title {
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     font-weight: 900;
     font-size: clamp(2rem, 6vw, 6rem);
     letter-spacing: 0.3em;
@@ -659,87 +696,150 @@ body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, 
     font-weight: 500;
     max-width: 700px;
     margin: 0 auto 60px;
+    line-height: 1.4;
   }
   
+  /* Cards container */
   .enterprise-cards {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
+    flex-direction: column; /* always vertical stack */
+    align-items: center;
+    text-align: center;
+    gap: 50px;
   }
   
+  /* Individual card */
   .enterprise-card {
-    background: #FAFAFA;
+    background: rgba(244, 67, 123, 0.7);
     border-radius: 15px;
-    width: 420px;
+    width: 660px;
     max-width: 90%;
-    padding: 30px 20px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    padding: 50px 40px;
+    color: #fafafa;
+    text-align: center;
   }
   
+  /* Headings inside cards */
   .enterprise-heading {
-    color: #F4437B;
+    font-family: "Inter", sans-serif;
+    color: #fafafa;
+    font-weight: 847;
     font-size: 2rem;
-    font-weight: 800;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
     margin-bottom: 15px;
-  }
-  
-  .enterprise-description {
-    color: #4874ED;
-    font-size: 1.1rem;
-    line-height: 1.4;
-    margin-bottom: 20px;
-  }
-  
-  
-.offer-box {
-  background: #F4437B;
-  border-radius: 15px;
-  padding: 20px;
-  text-align: left; 
-  color: #FaFaFa;
-  font-size: 1rem;
-  line-height: 1.4;
-  margin-bottom: 25px;
-}
+    text-align: center;
 
-.offer-box ul {
-  list-style-type: disc;
-  padding-left: 20px;
-  margin: 0;
-}
+  }
+  
+  /* Descriptions inside cards */
+  .enterprise-description {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.4;
+    color: #fafafa;
+    margin-bottom: 25px;
+    text-align: center;
+
+  }
+  
+  /* Offer box */
+  .offer-box {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 20px 25px;
+    text-align: left;
+    color: #f4437b;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin-bottom: 30px;
+  }
+  
+  .offer-box ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 0;
+  }
+  
+  /* Button */
   .join-btn {
-    background: #4874ED;
-    color: #fff;
+    background: #4874ed;
+    color: #ffffff;
     border: none;
     border-radius: 30px;
-    padding: 12px 30px;
+    padding: 10px 30px;
     font-size: 1rem;
     font-weight: 700;
     cursor: pointer;
-    transition: 0.3s ease;
+    transition: background 0.3s ease;
+    text-align: center;
+
   }
   
   .join-btn:hover {
     background: #335dc4;
   }
   
-  @media (max-width: 768px) {
-    .enterprise-title {
-      font-size: 2rem;
-      letter-spacing: 0.2em;
-    }
-    .enterprise-subtitle {
-      font-size: 1rem;
-      margin-bottom: 40px;
-    }
-    .enterprise-card {
-      width: 100%;
-      padding: 25px 15px;
-    }
-    .enterprise-cards {
-      gap: 20px;
-    }
+  /* ===== Responsive adjustments ===== */
+  @media (max-width: 1024px) {
+  .enterprise-bg {
+    position: relative;
+    overflow: hidden;
+    min-height: 140vh; /* enough room for cards + image */
   }
+    /* Add white gradient overlay at the bottom */
+    .enterprise-bg::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 180px; /* controls the visible white fade area */
+      background: linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(255, 255, 255, 0.85) 40%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      pointer-events: none;
+      z-index: 1;
+    }
+    .enterprise-overlay {
+      position: relative;
+      z-index: 2;
+      padding-bottom: 18vh; /* gives more space before gradient */
+    }
+  
+    /* Fix centering of all overlay elements */
+    .enterprise-overlay,
+    .enterprise-cards {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center; /* fix left shift */
+    }
+  
+    .enterprise-card {
+      width: 90%;
+      max-width: 400px;
+      padding: 20px 16px;
+      text-align: center; /* cards remain readable */
+    }
+  
+    .enterprise-title,
+    .enterprise-subtitle {
+      text-align: center;
+    }
+  
+    .enterprise-image {
+      height: 115%;
+      object-fit: cover;
+      object-position: center 25%;
+    }
+  
+}
+
+
+
   
