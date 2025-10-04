@@ -1142,6 +1142,136 @@ body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, 
     height: 28px;
   }
 }
+.vision-2030 {
+  position: relative;
+  text-align: center;
+  color: #fafafa;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
 
+.vision-2030-bg {
+  position: relative;
+  width: 100%;
+  background: #22C3A3;
+  padding: 100px 20px 60px 20px;
+}
 
-  
+.vision-2030-overlay {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.vision-2030-logo {
+  width: clamp(60px, 8vw, 90px);
+  height: auto;
+  margin-bottom: 30px;
+}
+
+.vision-2030 .title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
+  letter-spacing: 0.3em;
+  font-size: clamp(2rem, 6vw, 5rem);
+  margin: 10px 0;
+  color: #fafafa;
+}
+
+.vision-2030 .subtitle {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: clamp(0.9rem, 2vw, 1.3rem);
+  letter-spacing: 0.01em;
+  color: #fafafa;
+  margin-top: 10px;
+}
+
+/* Cards layout */
+.vision-2030-cards {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0;
+}
+
+.vision-2030-cards .card {
+  flex: 1 1 33.3333%;
+  aspect-ratio: 533 / 533;
+  padding: 60px 30px;
+  margin: 0;
+  border-radius: 0;
+  color: #fafafa;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Card colors (top half and bottom half effect) */
+.card.human {
+  background: linear-gradient(to bottom, #fafafa 45%, #4874ED 45%);
+  color: #4874ED;
+}
+
+.card.economic {
+  background: linear-gradient(to bottom, #4874ED 45%, #fafafa 45%);
+  color: #4874ED;
+}
+
+.card.social {
+  background: linear-gradient(to bottom, #fafafa 45%, #4874ED 45%);
+  color: #4874ED;
+}
+
+.card.human h4,
+.card.social h4 {
+  color: #4874ED;
+}
+
+.card.economic h4 {
+  color: #fafafa;
+}
+
+.card.economic p {
+  color: #4874ED;
+}
+
+.card.human p,
+.card.social p {
+  color: #fafafa;
+}
+
+/* Typography inside cards */
+.vision-2030-cards h4 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  letter-spacing: 0.1em;
+}
+
+.vision-2030-cards p {
+  font-size: 1rem;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  max-width: 350px;
+}
+
+/* Responsive behavior */
+@media (max-width: 900px) {
+  .vision-2030-cards .card {
+    flex: 1 1 100%;
+    aspect-ratio: auto;
+    padding: 50px 20px;
+  }
+
+  .vision-2030-cards h4 {
+    font-size: 1.5rem;
+  }
+
+  .vision-2030-cards p {
+    font-size: 0.95rem;
+  }
+}
