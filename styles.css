@@ -1,9 +1,7 @@
-/* Base resets */
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; }
 body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color: #111; }
 
-/* Header box*/
 .site-header {
   position: fixed; 
   left: 0;
@@ -205,7 +203,6 @@ body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, 
   }
 }
 
-/* Mobile styles */
 @media (max-width: 30rem) {
   .vision-section {
     padding: 3rem 1.25rem;
@@ -361,7 +358,7 @@ body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, 
     font-size: 24px;
   }
 }
-/* === We Inspire Section === */
+
 .we-inspire {
   position: relative;
   text-align: center;
@@ -401,15 +398,15 @@ body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, 
 }
 
 .we-inspire-logo {
-  width: clamp(25px, 5vw, 35px);  /* scales with viewport */
-  height: auto;                   /* keeps aspect ratio */
+  width: clamp(25px, 5vw, 35px);
+  height: auto; 
   margin-bottom: 10px;
 }
 
 .we-inspire .subtitle {
   font-family: 'Inter', sans-serif;
   font-weight: 700;
-  font-size: clamp(0.9rem, 2.5vw, 1rem); /* responsive size */
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
   margin-bottom: 15px;
   letter-spacing: -0.017em;
   color: #fafafa;
@@ -418,13 +415,13 @@ body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, 
 .we-inspire .title {
   font-family: 'Inter', sans-serif;
   font-weight: 999;
-  letter-spacing: clamp(0.2em, 1vw, 0.5em); /* less extreme on small screens */
+  letter-spacing: clamp(0.2em, 1vw, 0.5em);
   color: #fafafa;
   margin: 0;
-  font-size: clamp(2rem, 6vw, 9rem);  /* responsive headline */
+  font-size: clamp(2rem, 6vw, 9rem);
   text-align: center;
-  white-space: normal;                /* allow wrapping on mobile */
-  line-height: 1.1;                   /* tighter spacing */
+  white-space: normal;
+  line-height: 1.1;                 
   margin-bottom: 30px;
 }
 @media (max-width: 480px) {
@@ -455,9 +452,9 @@ body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, 
   padding: 100px 20px;
   color: #fff;
   text-align: center;
-  display: flex;               /* NEW */
-  flex-direction: column;      /* stack heading + text */
-  justify-content: center;     /* center vertically */
+  display: flex;        
+  flex-direction: column;      
+  justify-content: center;     
   align-items: center; 
 
 }
@@ -498,7 +495,6 @@ body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, 
 
 
 
-/* === RAISE Zones Section === */
 .raise-zones {
   text-align: center;
   padding: 80px 20px;
@@ -538,7 +534,6 @@ body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, 
   color: #4874ED;
 }
 
-/* === Cards Grid === */
 .raise-cards {
   display: grid;
   grid-template-columns: repeat(6, minmax(270px, 1fr));
@@ -572,7 +567,6 @@ body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, 
   border-radius: 15px;
 }
 
-/* Overlay */
 .raise-card .overlay {
   position: absolute;
   bottom: 0;
@@ -584,9 +578,9 @@ body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, 
   padding: 20px;
   transition: all 0.4s ease;
   border-radius: 0 0 15px 15px;
-  max-height: 90px; /* only show title */
+  max-height: 90px; 
   overflow: hidden;
-  justify-content: center; /* centers content vertically */
+  justify-content: center; 
   align-items: center;
   justify-items: center;
 }
@@ -607,9 +601,8 @@ body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, 
   transition: opacity 0.3s ease;
 }
 
-/* Hover Effect */
 .raise-card:hover .overlay {
-  max-height: 300px; /* expand */
+  max-height: 300px;
 }
 
 .raise-card:hover .overlay p {
@@ -646,4 +639,107 @@ body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, 
     display: block;
     border-radius: 15px;
   }}
+  .enterprise-zone {
+    background-color: #22C3A3;
+    color: #FAFAFA;
+    text-align: center;
+    padding: 80px 20px;
+  }
+  
+  .enterprise-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+    font-size: clamp(2rem, 6vw, 6rem);
+    letter-spacing: 0.3em;
+    margin: 10px 0 20px;
+  }
+  
+  .enterprise-subtitle {
+    font-size: 1.2rem;
+    font-weight: 500;
+    max-width: 700px;
+    margin: 0 auto 60px;
+  }
+  
+  .enterprise-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .enterprise-card {
+    background: #FAFAFA;
+    border-radius: 15px;
+    width: 420px;
+    max-width: 90%;
+    padding: 30px 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+  
+  .enterprise-heading {
+    color: #F4437B;
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    margin-bottom: 15px;
+  }
+  
+  .enterprise-description {
+    color: #4874ED;
+    font-size: 1.1rem;
+    line-height: 1.4;
+    margin-bottom: 20px;
+  }
+  
+  
+.offer-box {
+  background: #F4437B;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: left; 
+  color: #FaFaFa;
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-bottom: 25px;
+}
+
+.offer-box ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin: 0;
+}
+  .join-btn {
+    background: #4874ED;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  .join-btn:hover {
+    background: #335dc4;
+  }
+  
+  @media (max-width: 768px) {
+    .enterprise-title {
+      font-size: 2rem;
+      letter-spacing: 0.2em;
+    }
+    .enterprise-subtitle {
+      font-size: 1rem;
+      margin-bottom: 40px;
+    }
+    .enterprise-card {
+      width: 100%;
+      padding: 25px 15px;
+    }
+    .enterprise-cards {
+      gap: 20px;
+    }
+  }
   
