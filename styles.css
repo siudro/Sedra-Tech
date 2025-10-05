@@ -556,7 +556,9 @@ body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, 
   overflow: hidden;
   border-radius: 15px;
   cursor: pointer;
-  margin: 0 auto
+  margin: 0 auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
 }
 
 .raise-card img {
@@ -565,6 +567,7 @@ body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, 
   object-fit: cover;
   display: block;
   border-radius: 15px;
+  
 }
 
 .raise-card .overlay {
@@ -583,6 +586,8 @@ body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, 
   justify-content: center; 
   align-items: center;
   justify-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
 }
 
 .raise-card .overlay h3 {
@@ -616,6 +621,7 @@ body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, 
     max-width: 700px;
     margin: 0 auto;
     justify-content: center;
+    
   
   }
 
@@ -625,7 +631,9 @@ body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, 
     border-radius: 15px;
     cursor: pointer;
     width: 90vw;
-    margin: 0 auto
+    margin: 0 auto;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
     
   }
   .card1, .card2, .card3, .card4, .card5 {
@@ -676,6 +684,8 @@ body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, 
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1);
+
   }
   
   .enterprise-title {
@@ -700,6 +710,8 @@ body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, 
     align-items: center;
     text-align: center;
     gap: 50px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
   }
   
   .enterprise-card {
@@ -710,6 +722,8 @@ body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, 
     padding: 50px 40px;
     color: #fafafa;
     text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
   }
   
   .enterprise-heading {
@@ -971,7 +985,7 @@ body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, 
 }
 
 .card-body {
-  background: rgba(244, 67, 123, 0.1);
+  background: #fafafa;
   padding: 30px 18px;
   flex-grow: 1;
   display: flex;
@@ -1070,6 +1084,7 @@ body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, 
   .sponsors-subtitle {
     font-size: 18px;
     line-height: 24px;
+    color:#F4437B
   }
 }
 
@@ -1088,6 +1103,7 @@ body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, 
     font-size: 16px;
     line-height: 22px;
     padding: 0 20px;
+    color:#F4437B
   }
 
   .sponsors-container {
@@ -1362,6 +1378,8 @@ body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, 
   display: flex;
   flex-direction: column;
   transition: transform 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
 }
 
 .join-us-card:hover {
