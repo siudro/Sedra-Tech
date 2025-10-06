@@ -1351,7 +1351,7 @@ body {
 }
 
 .vision-2030-logo {
-  width: clamp(60px, 8vw, 90px);
+  width: clamp(160px, 8vw, 90px);
   height: auto;
   margin-bottom: 30px;
 }
@@ -1372,6 +1372,7 @@ body {
   letter-spacing: 0.01em;
   color: #fafafa;
   margin-top: 10px;
+  margin-bottom: 50px;
 }
 
 /* Cards layout */
@@ -1380,14 +1381,17 @@ body {
   flex-wrap: wrap;
   width: 100%;
   margin: 0;
+  column-gap: 20px;
+  row-gap: 20px;
+
 }
 
 .vision-2030-cards .card {
-  flex: 1 1 33.3333%;
+  flex: 1 1 25%;
   aspect-ratio: 533 / 533;
   padding: 60px 30px;
   margin: 0;
-  border-radius: 0;
+  border-radius: 20px;
   color: #fafafa;
   text-align: center;
   display: flex;
@@ -1395,7 +1399,11 @@ body {
   justify-content: center;
   align-items: center;
 }
+.vision-2030-cards .card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0.5rem 1.5625rem rgba(0, 0, 0, 0.2);
 
+}
 /* Card colors (top half and bottom half effect) */
 .card.human {
   background: linear-gradient(to bottom, #fafafa 45%, #4874ED 45%);
@@ -1410,7 +1418,6 @@ body {
 .card.social {
   background: linear-gradient(to bottom, #fafafa 45%, #4874ED 45%);
   color: #4874ED;
-  padding-top: 20px;
 }
 
 .card.human h4,
@@ -1435,7 +1442,7 @@ body {
 .vision-2030-cards h4 {
   font-size: 1.8rem;
   font-weight: 800;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
   letter-spacing: 0.1em;
 }
 
@@ -1447,15 +1454,30 @@ body {
 }
 
 /* Responsive behavior */
-@media (max-width: 900px) {
+@media (max-width: 1080px) {
+  .vision-2030-cards{
+    transform: translate(30%, 0%);
+    max-width: 60vw
+  }
   .vision-2030-cards .card {
     flex: 1 1 100%;
     aspect-ratio: auto;
     padding: 50px 20px;
+    background: linear-gradient(to bottom, #fafafa 45%, #4874ED 45%);
+    color: #4874ED;
+    
   }
-
+  .card.economic h4 {
+    color: #4874ED;
+  }
+  
+  .card.economic p {
+    color: #FAFAFA;
+  }
   .vision-2030-cards h4 {
     font-size: 1.5rem;
+
+    
   }
 
   .vision-2030-cards p {
@@ -1471,15 +1493,19 @@ body {
   }
 
   .vision-2030-cards h4 {
-    font-size: 1.5rem;
+    font-size: clamp(1.2rem, 5vw, 1.5rem);
     text-align: center;
+    font-weight: 900;
     justify-content: center;
+    margin-bottom: 25px;
+
   }
 
   .vision-2030-cards p {
-    font-size: 0.95rem;
+    font-size: clamp(0.8rem, 3vw, 0.95rem);
     text-align: center;
     justify-content: center;
+    color: #4874ED
   }
 }
 
