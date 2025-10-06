@@ -192,6 +192,7 @@ body {
   align-items: center;
   justify-content: center;
   padding: 5rem 1.25rem;
+  
 }
 
 .vision-container {
@@ -203,12 +204,14 @@ body {
 
 .vision-header {
   margin-bottom: 3rem;
+  margin-top: 3rem;
 }
 
 .vision-logo {
   width: 2.1875rem;
   height: 2rem;
   margin-bottom: 1.5rem;
+  margin-top: 4rem;
 }
 
 .vision-title {
