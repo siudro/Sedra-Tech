@@ -657,10 +657,8 @@ body {
 
 .raise-cards {
   display: grid;
-  grid-template-columns: repeat(6, minmax(270px, 1fr));
   row-gap: 50px;
-  column-gap: 1px;
-  max-width: 1680;
+  column-gap: 10px;
   margin: 0 auto;
   justify-content: center;
 
