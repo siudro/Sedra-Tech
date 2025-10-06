@@ -1404,7 +1404,6 @@ body {
   box-shadow: 0 0.5rem 1.5625rem rgba(0, 0, 0, 0.2);
 
 }
-/* Card colors (top half and bottom half effect) */
 .card.human {
   background: linear-gradient(to bottom, #fafafa 45%, #4874ED 45%);
   color: #4874ED;
@@ -1438,7 +1437,6 @@ body {
   color: #fafafa;
 }
 
-/* Typography inside cards */
 .vision-2030-cards h4 {
   font-size: 1.8rem;
   font-weight: 800;
@@ -1486,10 +1484,17 @@ body {
 }
 
 @media (max-width: 490px) {
+  .vision-2030-cards{
+    transform: translate(25%, 0%);
+
+
+  }
   .vision-2030-cards .card {
     flex: 1 1 100%;
     aspect-ratio: auto;
-    padding: 1px 20px;
+    padding: 10px 20px;
+    max-width: 60vw
+
   }
 
   .vision-2030-cards h4 {
@@ -1502,10 +1507,11 @@ body {
   }
 
   .vision-2030-cards p {
-    font-size: clamp(0.8rem, 3vw, 0.95rem);
+    font-size: clamp(0.8rem, 2vw, 0.7rem);
     text-align: center;
     justify-content: center;
     color: #4874ED
+    
   }
 }
 
