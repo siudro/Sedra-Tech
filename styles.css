@@ -839,12 +839,13 @@ body {
 }
 
 .enterprise-title {
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   font-weight: 900;
   font-size: clamp(2rem, 6vw, 6rem);
   letter-spacing: 0.3em;
   margin: 10px 0 20px;
 }
+
 
 .enterprise-subtitle {
   font-size: 1.2rem;
@@ -956,7 +957,19 @@ body {
     pointer-events: none;
     z-index: 1;
   }
+  .enterprise-title {
+    margin-bottom: 2rem;
+    letter-spacing: 0.05em;
+    margin-top: 2.5rem;
 
+  }
+  
+  
+  .enterprise-subtitle {
+    margin-bottom: 3rem;
+    line-height: 1.6;
+    max-width: 43.75rem;
+  }
   .enterprise-overlay {
     position: relative;
     z-index: 2;
