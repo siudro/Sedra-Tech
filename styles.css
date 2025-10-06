@@ -616,6 +616,7 @@ body {
   text-align: center;
   padding: 80px 20px;
   background: #fafafa;
+  overflow: hidden;
 }
 
 .raise-logo {
