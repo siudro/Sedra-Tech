@@ -107,18 +107,23 @@ body {
   .header-container {
     height: 80px;
   }
+  .nav-list a {
+
+  font-size: 12px;
+
+}
 
   .brand__name {
     font-size: 28px;
     line-height: 34px;
   }
   .nav-list a {
-    color: #4874ED;
+    color: #fafafa;
   }
   
 }
 
-@media (max-width: 768px) {
+@media (max-width: 812px) {
   .nav-toggle {
     display: inline-block;
   }
@@ -128,7 +133,7 @@ body {
     left: 0;
     right: 0;
     top: 80px;
-    background: #FAFAFA;
+    background: #4874ED;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
     display: none;
   }
@@ -231,59 +236,128 @@ body {
   padding: 0 1.25rem;
 }
 
-.get-started-btn {
-  width: min(14.375rem, 90%);
-  max-width: 14.375rem;
-  height: 3.9375rem;
-  padding: 0 1.25rem;
+/* ===== Button Container ===== */
+.vision-buttons {
+  display: flex;
+  gap: 100px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+/* ===== Base Button Styles ===== */
+.get-started-btn,
+.msx-button {
+  width: 14rem;
+  height: 4rem;
+  padding: 0;
   background: #F4437B;
   border: none;
   border-radius: 1.875rem;
   font-family: 'Inter', sans-serif;
-  font-weight: 800;
-  font-size: 1.75rem;
-  line-height: 2.125rem;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 3.9375rem; /* vertically centered */
   text-align: center;
   letter-spacing: 0.05em;
   color: #FAFAFA;
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  margin-bottom: 3rem;
+  display: inline-block;
+  text-decoration: none; /* remove underline */
+  box-sizing: border-box;
+  white-space: nowrap; /* prevent wrapping */
 }
 
-.get-started-btn:hover {
+.get-started-btn:hover,
+.msx-button:hover {
   transform: translateY(-0.125rem);
   box-shadow: 0 0.5rem 1.5625rem rgba(0, 0, 0, 0.2);
 }
 
-@media (max-width: 48rem) {
-  .vision-section {
-    padding: 4rem 1.5rem;
-    min-height: auto;
+/* ===== Tablet and smaller desktop ===== */
+@media (max-width: 991px) {
+  .vision-buttons {
+    gap: 50px;
+    flex-wrap: nowrap; /* keep buttons in same row */
+    justify-content: center;
+    align-items: center;
   }
 
-  .vision-header {
-    margin-bottom: 2.5rem;
-  }
-
-  .vision-main-title {
-    margin-bottom: 2.5rem;
-    letter-spacing: 0.05em;
-  }
-
-  .vision-description {
-    margin-bottom: 3rem;
-    line-height: 1.6;
-    max-width: 43.75rem;
-  }
-
-  .get-started-btn {
-    width: min(12.5rem, 85%);
-    max-width: 12.5rem;
+  .get-started-btn,
+  .msx-button {
+    width: 12.5rem;
     height: 3.5rem;
-    font-size: 1.5rem;
-    line-height: 1.875rem;
-    margin-bottom: 2.5rem;
+    font-size: 1.25rem;
+    line-height: 3.5rem;
+  }
+}
+
+/* ===== Mid-range screens (768px–600px) ===== */
+@media (max-width: 768px) and (min-width: 600px) {
+  .vision-buttons {
+    flex-wrap: nowrap; /* force in one line */
+    justify-content: center;
+    align-items: center;
+    gap: 50px; /* smaller gap to fit */
+  }
+
+  button.get-started-btn,
+  .msx-button {
+    width: 12.5rem;
+    height: 3.5rem;
+    font-size: 1.2rem;
+  }
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 599px) {
+  .vision-buttons {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    flex-wrap: nowrap; /* keep buttons in same row */
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+    
+    
+  }
+
+  button.get-started-btn{
+    width: 12.5rem;
+    height: 3.5rem;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+  .msx-button {
+    width: 12.5rem;
+    height: 3.5rem;
+    font-size: 1.25rem;
+    line-height: 3.5rem;
+    
+  }
+  
+}
+
+/* ===== Extra Small Mobile ===== */
+@media (max-width: 360px) {
+    .vision-buttons {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    display: flex;
+    
+  }
+
+  button.get-started-btn,
+  .msx-button {
+    width: 12.5rem;
+    height: 3.25rem;
+    font-size: 1.25rem;
+    line-height: 3.125rem;
+    border-radius: 1.5625rem;
   }
 }
 
@@ -317,15 +391,7 @@ body {
     font-size: 1rem;
   }
 
-  .get-started-btn {
-    width: min(11.25rem, 80%);
-    max-width: 11.25rem;
-    height: 3.125rem;
-    font-size: 1.25rem;
-    line-height: 1.625rem;
-    border-radius: 1.5625rem;
-    margin-bottom: 2rem;
-  }
+
 }
 
 
@@ -1706,6 +1772,8 @@ body {
   margin: 0 auto;
 }
 
+
+
 .contact-info {
   flex: 1;
   display: flex;
@@ -2052,5 +2120,369 @@ body {
   .footer-copyright {
     font-size: 11px;
     line-height: 15px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===== CONSULTING SECTION ===== */
+.consulting-section {
+  background: #FAFAFA;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.consulting-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header Styles */
+.consulting-header {
+  margin-bottom: 60px;
+}
+
+.consulting-logo {
+  width: 35px;
+  height: 32px;
+  margin-bottom: 20px;
+  object-fit: contain;
+}
+
+.consulting-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
+  font-size: clamp(2rem, 5vw, 3.125rem);
+  line-height: 1.2;
+  letter-spacing: 0.3em;
+  color: #4874ED;
+  margin: 0 0 20px 0;
+  text-transform: uppercase;
+}
+
+.consulting-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+  color: #4874ED;
+  max-width: 997px;
+  margin: 0 auto;
+}
+
+/* Cards Grid - Same pattern as RAISE cards */
+.consulting-grid {
+  display: grid;
+  row-gap: 50px;
+  column-gap: 30px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+/* Individual Card */
+.consulting-card {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+  
+}
+
+.consulting-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Position cards in grid - First row: 3 cards, Second row: 2 cards centered */
+.consulting-card:nth-child(1) {
+  grid-column: 1 / 3;
+  grid-row: 1;
+}
+
+.consulting-card:nth-child(2) {
+  grid-column: 3 / 5;
+  grid-row: 1;
+}
+
+.consulting-card:nth-child(3) {
+  grid-column: 5 / 7;
+  grid-row: 1;
+}
+
+.consulting-card:nth-child(4) {
+  grid-column: 2 / 4;
+  grid-row: 2;
+}
+
+.consulting-card:nth-child(5) {
+  grid-column: 4 / 6;
+  grid-row: 2;
+}
+
+/* Card Header */
+.consulting-card-header {
+  padding: 25px 20px;
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 15px 15px 0 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+.consulting-card-header h3 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 847;
+  font-size: 1.25rem;
+  line-height: 1.4;
+  letter-spacing: 0.1em;
+  color: #FFFFFF;
+  margin: 0;
+  text-transform: uppercase;
+  
+}
+
+/* Card Body */
+.consulting-card-body {
+  background: #FAFAFA;
+  padding: 25px 20px;
+  flex: 1;
+  border-radius: 0 0 15px 15px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+.consulting-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.consulting-list li {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: #666666;
+  margin-bottom: 12px;
+  text-align: left;
+  padding-left: 20px;
+  position: relative;
+}
+
+.consulting-list li:before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #666666;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.consulting-list li:last-child {
+  margin-bottom: 0;
+}
+
+/* Header Background Colors */
+.bronze-bg {
+  background: #CE8946;
+}
+
+.silver-bg {
+  background: #C0C0C0;
+}
+
+.blue-bg {
+  background: #4874ED;
+}
+
+.teal-bg {
+  background: #22C3A3;
+}
+
+.gold-bg {
+  background: #FFD700;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Desktop - maintain grid layout */
+@media (min-width: 992px) {
+  .consulting-grid {
+    column-gap: 30px;
+  }
+  
+  .consulting-card {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+/* Tablet - 2 cards per row */
+@media (max-width: 750px) {
+  .consulting-section {
+    padding: 60px 20px;
+  }
+  
+  .consulting-header {
+    margin-bottom: 50px;
+  }
+  
+  .consulting-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    justify-content: center;
+  }
+  
+      .consulting-card:nth-child(1) {
+    grid-column: 1 / 3;
+    grid-row: 1;
+
+    
+  }    .consulting-card:nth-child(2) {
+    grid-column: 3 / 5;
+    grid-row: 1;
+
+    
+  }    .consulting-card:nth-child(3) {
+    grid-column: 5 / 7;
+    grid-row: 1;
+
+    
+  }
+    .consulting-card:nth-child(4) {
+    grid-column: 2 / 4;
+    grid-row: 2;
+
+    
+  }
+  /* Center the 5th card */
+  .consulting-card:nth-child(5) {
+    grid-column: 4 / 6;
+    grid-row: 2;
+  }
+  
+  .consulting-card {
+    max-width: 320px;
+  }
+  
+  .consulting-title {
+    letter-spacing: 0.2em;
+  }
+}
+
+/* Mobile - 1 card per row */
+@media (max-width: 749px) {
+  .consulting-section {
+    padding: 50px 16px;
+  }
+  
+  .consulting-header {
+    margin-bottom: 40px;
+  }
+  
+  .consulting-logo {
+    width: 30px;
+    height: 28px;
+    margin-bottom: 15px;
+  }
+  
+  .consulting-title {
+    font-size: 1.75rem;
+    letter-spacing: 0.15em;
+    margin-bottom: 15px;
+  }
+  
+  .consulting-subtitle {
+    font-size: 0.95rem;
+    padding: 0 10px;
+  }
+  
+  .consulting-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  /* Reset grid positioning for mobile */
+  .consulting-card:nth-child(1),
+  .consulting-card:nth-child(2),
+  .consulting-card:nth-child(3),
+  .consulting-card:nth-child(4),
+  .consulting-card:nth-child(5) {
+    grid-column: auto;
+    grid-row: auto;
+  }
+  
+  .consulting-card {
+    max-width: 100%;
+    width: 50%;
+  }
+  
+  .consulting-card-header {
+    padding: 20px 15px;
+    min-height: 100px;
+  }
+  
+  .consulting-card-header h3 {
+    font-size: 1.1rem;
+    letter-spacing: 0.08em;
+  }
+  
+  .consulting-card-body {
+    padding: 20px 15px;
+  }
+  
+  .consulting-list li {
+    font-size: 0.85rem;
+    padding-left: 18px;
+    margin-bottom: 10px;
+  }
+}
+
+/* Extra small mobile */
+@media (max-width: 530px) {
+  .consulting-title {
+    font-size: 1.5rem;
+    letter-spacing: 0.1em;
+  }
+  
+  .consulting-subtitle {
+    font-size: 0.875rem;
+  }   
+  
+  .consulting-card-header h3 {
+    font-size: 1rem;
+  }
+  
+  .consulting-list li {
+    font-size: 0.8rem;
+  }
+    .consulting-card {
+    max-width: 100%;
+    width: 88%;
   }
 }
